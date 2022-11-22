@@ -1,19 +1,24 @@
+import Layout from "../components/layout";
 import styled from "styled-components";
-import { Text } from "../components/ui";
 
 const Style = {
   Wrapper: styled.div`
-    width: 100px;
-    height: 100px;
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 80vh;
+    border: 10px solid black;
   `,
 };
 
 const Index = () => {
   return (
-    <Style.Wrapper>
-      <Text.Title>메인</Text.Title>
-    </Style.Wrapper>
+    <>
+      <Layout>
+        <Style.Wrapper>본격적인내용 = children</Style.Wrapper>
+      </Layout>
+    </>
   );
 };
 
