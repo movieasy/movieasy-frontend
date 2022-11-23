@@ -6,11 +6,11 @@ const Style = {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 15vh;
+    height: 60vh;
     background-color: yellowgreen;
   `,
 };
 
 export default function Header() {
-  return <Style.Wrapper>헤더</Style.Wrapper>;
+  return <Style.Wrapper>배너 들어갈 헤더</Style.Wrapper>;
 }
