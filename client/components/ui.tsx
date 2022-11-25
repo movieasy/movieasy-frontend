@@ -61,8 +61,8 @@ type StyleText = {
 
 export const Text = {
   Title: styled.span<StyleText>`
-    font-weight: 500;
-    font-size: 32px;
+    font-weight: 1000;
+    font-size: 30px;
     /* common */
     display: ${({ box }) => (box ? "block" : "inline")};
     cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
@@ -70,12 +70,66 @@ export const Text = {
       color ? theme.color[color] : theme.color.white};
     height: fit-content;
   `,
-  Subtitle: styled.span<StyleText>``,
-  Body: styled.span<StyleText>``,
-  Menu: styled.span<StyleText>``,
-  Maintext: styled.span<StyleText>``,
-  Number: styled.span<StyleText>``,
-  ErrorSign: styled.span<StyleText>``,
+  Subtitle: styled.span<StyleText>`
+    font-weight: 500;
+    font-size: 26px;
+    /* common */
+    display: ${({ box }) => (box ? "block" : "inline")};
+    cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
+    color: ${({ color, theme }) =>
+      color ? theme.color[color] : theme.color.white};
+    height: fit-content;
+  `,
+  Body: styled.span<StyleText>`
+    font-weight: 400;
+    font-size: 22px;
+    /* common */
+    display: ${({ box }) => (box ? "block" : "inline")};
+    cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
+    color: ${({ color, theme }) =>
+      color ? theme.color[color] : theme.color.white};
+    height: fit-content;
+  `,
+  Maintext: styled.span<StyleText>`
+    font-weight: 500;
+    font-size: 20px;
+    /* common */
+    display: ${({ box }) => (box ? "block" : "inline")};
+    cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
+    color: ${({ color, theme }) =>
+      color ? theme.color[color] : theme.color.white};
+    height: fit-content;
+  `,
+  Menu: styled.span<StyleText>`
+    font-weight: 400;
+    font-size: 12px;
+    /* common */
+    display: ${({ box }) => (box ? "block" : "inline")};
+    cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
+    color: ${({ color, theme }) =>
+      color ? theme.color[color] : theme.color.white};
+    height: fit-content;
+  `,
+  Number: styled.span<StyleText>`
+    font-weight: 400;
+    font-size: 16px;
+    /* common */
+    display: ${({ box }) => (box ? "block" : "inline")};
+    cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
+    color: ${({ color, theme }) =>
+      color ? theme.color[color] : theme.color.white};
+    height: fit-content;
+  `,
+  ErrorSign: styled.span<StyleText>`
+    font-weight: 500;
+    font-size: 12px;
+    /* common */
+    display: ${({ box }) => (box ? "block" : "inline")};
+    cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
+    color: ${({ color, theme }) =>
+      color ? theme.color[color] : theme.color.red};
+    height: fit-content;
+  `,
 };
 
 type StyleMargin = {
@@ -150,6 +204,7 @@ export const Hover = styled.span<StyleHover>`
   display: ${({ box }) => (box ? "block" : "inline")};
   cursor: pointer;
   :hover {
-    opacity: 0.7;
+    opacity: 0.5;
+    transition: 0.3s;
   }
 `;

@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
-import Footer from "./Footer";
 import Header from "./Header";
 
 type Props = {
@@ -17,12 +16,13 @@ const Style = {
     align-items: center;
     /* border: 3px solid red; */
   `,
-  Main: styled.main`
-    width: 1000px;
+  HomeHeader: styled.main`
+    width: 100vw;
     height: 100vh;
-    background-color: gray;
+    /* background-color: gray; */
+
     position: absolute;
-    border: 1px solid green;
+    /* border: 1px solid green; */
   `,
 };
 
@@ -30,7 +30,7 @@ export default function Layout({ children }: Props): JSX.Element {
   return (
     <Style.Wrapper>
       <Header />
-      <Style.Main>{children}</Style.Main>
+      <Style.HomeHeader>{children}</Style.HomeHeader>
     </Style.Wrapper>
   );
 }

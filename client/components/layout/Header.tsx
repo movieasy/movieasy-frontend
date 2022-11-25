@@ -6,8 +6,11 @@ const Style = {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 60vh;
-    background-color: yellowgreen;
+    height: 70vh;
+    /* background-color: black; */
+    /* background-image: url(https://source.unsplash.com/random); */
+    background-image: url("background.jpeg");
+    background-size: 100% 100%;
   `,
 };
 

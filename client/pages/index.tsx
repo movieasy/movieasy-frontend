@@ -4,23 +4,36 @@ import NavBar from "../components/NavBar";
 
 const Style = {
   Wrapper: styled.div`
-    width: 1000px;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 3px solid red;
+    /* border: 3px solid red; */
   `,
   Header: styled.div`
     width: 100%;
-    height: 60%; // 10%만 보여지고 그 외는 투명, 내용 없음
-    background-color: green;
+    height: 90%;
+    background: linear-gradient(
+      to bottom,
+      #111111 0%,
+      rgba(0, 0, 0, 0.15) 35%,
+      rgba(0, 0, 0, 0.05) 40%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.05) 65%,
+      rgba(0, 0, 0, 0.25) 75%,
+      #000000 100%
+    );
+    /* url(https://source.unsplash.com/random);
+    background-size: cover; */
+    /* border: 1px solid yellow; */
   `,
   Content: styled.div`
     width: 100%;
     height: 40%;
-    background-color: yellow;
+    background-color: black;
+    /* border: 1px solid red; */
   `,
 };
 

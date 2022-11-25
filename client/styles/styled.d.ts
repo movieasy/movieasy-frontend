@@ -5,6 +5,8 @@ declare module "styled-components" {
   export type DefaultThemeColorKey =
     | "black"
     | "white"
+    | "opacityWhite"
+    | "red"
     | "purple"
     | "blue"
     | "gray"
