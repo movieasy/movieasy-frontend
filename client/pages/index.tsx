@@ -1,21 +1,17 @@
-import Layout from "../components/layout";
+// import Layout from "../components/layout";
 import styled from "styled-components";
-import NavBar from "../components/NavBar";
+import Header from "../components/layout/Header";
+import Nav from "../components/layout/Nav";
 
 const Style = {
   Wrapper: styled.div`
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    /* border: 3px solid red; */
-  `,
-  Header: styled.div`
-    width: 100%;
-    height: 90%;
-    background: linear-gradient(
+    background-color: black;
+    /* background: linear-gradient(
       to bottom,
       #111111 0%,
       rgba(0, 0, 0, 0.15) 35%,
@@ -25,29 +21,23 @@ const Style = {
       rgba(0, 0, 0, 0.25) 75%,
       #000000 100%
     );
-    /* url(https://source.unsplash.com/random);
-    background-size: cover; */
-    /* border: 1px solid yellow; */
+    background-image: url("background.jpeg");
+    background-size: 2200px 1200px; */
   `,
-  Content: styled.div`
-    width: 100%;
-    height: 40%;
-    background-color: black;
-    /* border: 1px solid red; */
-  `,
+
+  Content: styled.div``,
 };
 
 const Index = () => {
   return (
     <>
-      <Layout>
-        <Style.Wrapper>
-          <Style.Header>
-            <NavBar />
-          </Style.Header>
-          <Style.Content>영화순위보여지는곳</Style.Content>
-        </Style.Wrapper>
-      </Layout>
+      {/* <Layout> */}
+      <Style.Wrapper>
+        <Header />
+        <Nav />
+        <Style.Content>콘텐츠?</Style.Content>
+      </Style.Wrapper>
+      {/* </Layout> */}
     </>
   );
 };

@@ -61,8 +61,12 @@ type StyleText = {
 
 export const Text = {
   Title: styled.span<StyleText>`
-    font-weight: 1000;
-    font-size: 30px;
+    /* font-family: "Times New Roman", Times, serif; */
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 8px;
+
+    font-weight: 700;
+    font-size: 34px;
     /* common */
     display: ${({ box }) => (box ? "block" : "inline")};
     cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
@@ -93,6 +97,16 @@ export const Text = {
   Maintext: styled.span<StyleText>`
     font-weight: 500;
     font-size: 20px;
+    /* common */
+    display: ${({ box }) => (box ? "block" : "inline")};
+    cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};
+    color: ${({ color, theme }) =>
+      color ? theme.color[color] : theme.color.white};
+    height: fit-content;
+  `,
+  Minitext: styled.span<StyleText>`
+    font-weight: 400;
+    font-size: 12px;
     /* common */
     display: ${({ box }) => (box ? "block" : "inline")};
     cursor: ${({ pointer }) => (pointer ? "pointer" : "auto")};

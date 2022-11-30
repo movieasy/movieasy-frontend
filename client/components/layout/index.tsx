@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
 import Header from "./Header";
+import Nav from "./Nav";
 
 type Props = {
   children: ReactNode;
@@ -17,20 +18,13 @@ const Style = {
     /* border: 3px solid red; */
   `,
   HomeHeader: styled.main`
-    width: 100vw;
+    width: 1000px;
     height: 100vh;
-    /* background-color: gray; */
-
     position: absolute;
-    /* border: 1px solid green; */
+    /* border: 10px solid green; */
   `,
 };
 
 export default function Layout({ children }: Props): JSX.Element {
-  return (
-    <Style.Wrapper>
-      <Header />
-      <Style.HomeHeader>{children}</Style.HomeHeader>
-    </Style.Wrapper>
-  );
+  return <Style.Wrapper>{children}</Style.Wrapper>;
 }
