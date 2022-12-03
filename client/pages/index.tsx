@@ -1,4 +1,5 @@
 // import Layout from "../components/layout";
+import { RecoilRoot } from "recoil";
 import styled from "styled-components";
 import Header from "../components/layout/Header";
 import Nav from "../components/layout/Nav";
@@ -25,18 +26,28 @@ const Style = {
     background-size: 2200px 1200px; */
   `,
 
-  Content: styled.div``,
+  Content: styled.div`
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    color: yellow;
+  `,
 };
 
 const Index = () => {
   return (
     <>
       {/* <Layout> */}
-      <Style.Wrapper>
-        <Header />
-        <Nav />
-        <Style.Content>콘텐츠?</Style.Content>
-      </Style.Wrapper>
+      <RecoilRoot>
+        <Style.Wrapper>
+          <Header />
+          <Nav />
+          <Style.Content>콘텐츠 넣을 자리</Style.Content>
+        </Style.Wrapper>
+      </RecoilRoot>
       {/* </Layout> */}
     </>
   );

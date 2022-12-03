@@ -61,9 +61,10 @@ type StyleText = {
 
 export const Text = {
   Title: styled.span<StyleText>`
-    /* font-family: "Times New Roman", Times, serif; */
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    letter-spacing: 8px;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 5px;
+    /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    letter-spacing: 8px; */
 
     font-weight: 700;
     font-size: 34px;

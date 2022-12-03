@@ -8,6 +8,7 @@ const Style = {
     height: 20px;
     display: flex;
     align-items: center;
+    padding-bottom: 10px;
     /* border: 10px solid purple; */
   `,
   Sign: styled.div`

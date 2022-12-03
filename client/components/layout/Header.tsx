@@ -1,5 +1,16 @@
-import { Text } from "../ui";
+import { Margin, Text } from "../ui";
 import styled from "styled-components";
+import { useCallback, useState } from "react";
+import dynamic from "next/dynamic";
+import RegisterModal from "../RegisterModal";
+
+const LoginModal = dynamic(import("../LoginModal"), {
+  ssr: false,
+});
+
+// const RegisterModal = dynamic(import("../RegisterModal"), {
+//   ssr: false,
+// });
 
 const Style = {
   Wrapper: styled.div`
@@ -21,11 +32,33 @@ const Style = {
 };
 
 export default function Header() {
+  const [isOpenLoginModal, setIsOpenLoginModal] = useState(false);
+  const handleOpenLoginModal = useCallback(() => {
+    console.log(isOpenLoginModal);
+    setIsOpenLoginModal(!isOpenLoginModal);
+  }, [isOpenLoginModal]);
+
+  // const handleOpenRegisterModal = useCallback(() => {
+  //   console.log(isOpenRegisterModal);
+  //   setIsOpenRegisterModal(!isOpenRegisterModal);
+  // }, [isOpenRegisterModal]);
+
+  // const [isOpenRegisterModal, setIsOpenRegisterModal] = useState(false);
+  // const handleOpenRegisterModal = useCallback(() => {
+  //   setIsOpenRegisterModal(!isOpenRegisterModal);
+  // }, [isOpenRegisterModal]);
+
   return (
     <Style.Wrapper>
+      <LoginModal />
+      <RegisterModal />
       <Text.Title> MOVIEASY</Text.Title>
       <Style.Sign>
-        <Text.Minitext>로그인 | 회원가입</Text.Minitext>
+        <Text.Minitext pointer onClick={handleOpenLoginModal}>
+          로그인
+        </Text.Minitext>
+        <Margin direction="row" size={8} />
+        <Text.Minitext pointer>회원가입</Text.Minitext>
       </Style.Sign>
     </Style.Wrapper>
   );
